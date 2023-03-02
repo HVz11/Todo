@@ -1,8 +1,8 @@
-import { useState } from "react";
+import useLocalStorageState from "./useLocalStorageState";
 const { v4: uuidv4 } = require('uuid');
-
+/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 export default initialTodos => {
-    const [todos, setTodos] = useState(initialTodos);
+    const [todos, setTodos] = useLocalStorageState("todos", initialTodos);
     return {
         todos,
         addTodo: newTodoText => {
