@@ -21,4 +21,4 @@ function EditTodoForm({ id, editTodo, task, toggleEditForm }) {
     );
 }
 
-export default EditTodoForm();
+export default EditTodoForm;

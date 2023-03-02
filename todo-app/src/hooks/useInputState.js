@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-// eslint-disable-next-line import/no-anonymous-default-export
+/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 export default initialVal => {
     const [value, setValue] = useState(initialVal);
     const handleChange = e => {
