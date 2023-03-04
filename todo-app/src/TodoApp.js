@@ -6,7 +6,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Grid from "@material-ui/core/Grid";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
-import useTodoState from "./hooks/useTodoState";
 import { TodosProvider } from "./context/todos.context";
 
 
