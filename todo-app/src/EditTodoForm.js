@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { TextField } from "@material-ui/core";
 import useInputState from "./hooks/useInputState";
+import { TodosContext } from "./context/todos.context";
 
-function EditTodoForm({ id, editTodo, task, toggleEditForm }) {
+function EditTodoForm({ id, task, toggleEditForm }) {
+    const { editTodo } = useContext(TodosContext)
     const [value, handleChange, reset] = useInputState(task);
     return (
         <form onSubmit={(e) => {
@@ -11,7 +13,7 @@ function EditTodoForm({ id, editTodo, task, toggleEditForm }) {
             reset();
             toggleEditForm();
         }}
-        style={{marginLeft: "1rem", width: "50%"}}
+            style={{ marginLeft: "1rem", width: "50%" }}
         >
             <TextField
                 margin="normal"
